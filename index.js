@@ -3,10 +3,13 @@ function BoardMember(name, homeState, training){
   this.homeState = homeState
   this.training = training
 
-  this.veto = function(){
+ 
+}
+
+ BoardMember.prototype.veto = function(){
     return 'No, I must disagree'
   }
-  this.approve = function(){
+ BoardMember.prototype.approve = function(){
     return 'You can do that!'
   }
   this.doCharity = function(){
@@ -20,4 +23,3 @@ function BoardMember(name, homeState, training){
   this.sayHi = function(){
     return `Hi, my name is ${this.name}. I am from ${this.homeState}, and I was trained in ${this.training}.`
   }
-}
